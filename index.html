@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Star Wars RPG!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poller+One|Roboto+Mono" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="top-banner">
+        <img id="sw-logo" src="assets/images/Starwars-logo.png" />
+        <h1 id="game-title">RPG</h1>
+    </div>
+
+
+    <div id="main-game">
+        <div id="main-left">
+            <div id="characters-div">
+                <h2>Choose a character:</h2>
+                <table class="character-sel">
+                    <tr>
+                        <td id="obiwan" class="characters"></td>
+                        <td id="luke" class="characters"></td>
+                    </tr>
+                    <tr>
+                        <td id="sidious" class="characters"></td>
+                        <td id="maul" class="characters"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="character-div" class="hide">
+                <h2>Your character:</h2>
+                <table class="character-sel">
+                    <tr>
+                        <td id="chosen" class="characters"></td>
+                    </tr>
+                </table>
+                <span id="character-name"></span>
+                <span id="character-life"></span>
+            </div>
+
+        </div>
+
+        <div id="main-right">
+            <h3>Enemies available to attack:</h3>
+            <table class="character-sel">
+                <tr>
+                    <td id="enemy-1" class="characters"></td>
+                    <td id="enemy-2" class="characters"></td>
+                    <td id="enemy-3" class="characters"></td>
+                </tr>
+            </table>
+
+            <h3>Fight section</h3>
+            <button id="attack">Attack</button>
+
+            <h3>Defender</h3>
+            <img id="defender" class="characters" />
+            <span id="enemy-name"></span>
+            <span id="enemy-life"></span>
+
+            <p id="current-char-action"></p>
+            <p id="current-enemy-action"></p>
+
+            <button id="restart">Restart</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

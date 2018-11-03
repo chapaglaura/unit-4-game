@@ -1,0 +1,166 @@
+h1, h2, h3 {
+    font-family: 'Poller One', cursive;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+}
+
+p, span {
+    font-family: 'Roboto Mono', monospace;
+}
+
+button {
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    background-color: white;
+    border: 3px solid black;
+    font-family: 'Poller One', cursive;
+    font-size: 1.5vw;
+    color: black;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: black;
+    border-color: gold;
+    color: gold;
+    cursor: pointer;
+}
+
+
+
+#top-banner {
+    background-image: url('../images/drop.gif');
+    padding: 5vh 0;
+    height: 15vh;
+    text-align: center;
+    position: relative;
+}
+
+#sw-logo {
+    height: 100%;
+}
+
+#game-title {
+    text-align: center;
+    font-family: 'Poller One', cursive;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: gold;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+#main-game {
+    min-height: 100vh;
+    background-image: url(../images/death-star.jpg);
+    background-size: cover;
+    display: flex;
+}
+
+#main-game > div {
+    width: 50%;
+    color: white;
+    text-align: center;
+    
+}
+
+#main-game > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.character-sel {
+    height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.characters {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    border: 5px solid white;
+    transition: all 0.2s ease;
+}
+
+.shadow {
+    opacity: 0.7 !important;
+    cursor: pointer;
+}
+
+td.characters:hover {
+    opacity: 1 !important;
+}
+
+#obiwan, .obiwan {
+    background-image: url('../images/obiwan.jpg');
+}
+
+#luke, .luke {
+    background-image: url('../images/luke.jpg');
+}
+
+#sidious, .sidious {
+    background-image: url('../images/sidious.jpg');
+}
+
+#maul, .maul {
+    background-image: url('../images/maul.png');
+}
+
+.hide {
+    display: none !important;
+}
+
+#main-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-right .character-sel, #defender {
+    height: 25vh;
+}
+
+#defender {
+    border: 5px solid white;
+    width: 30%;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+@media (max-width: 769px) {
+
+    h2, p, span {
+        font-size: 3vw;
+    }
+
+    h3, button {
+        font-size: 2.5vw;
+    }
+
+    #main-game {
+        flex-direction: column;
+    }
+
+    #main-game > div {
+        width: 100%;
+    }
+
+    .character-sel {
+        height: 30vh;
+    }
+}
