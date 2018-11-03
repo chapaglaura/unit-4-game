@@ -25,10 +25,18 @@ $(document).ready(function () {
 
     reset();
 
+    var swintro = new Audio('https://ia601703.us.archive.org/15/items/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.ogg');
+    swintro.loop = true;
+    swintro.volume = 0.5;
+
+    var swing = new Audio('ls-swing.mp3');
+
+    var enswing = new Audio('ls-swing-2.mp3')
+    
 
     //when any character is clicked
     $("#main-left .characters").click(function () {
-
+        swintro.play();
         //if character has not been chosen already
         if (isCharacterChosen === false) {
 
@@ -81,6 +89,8 @@ $(document).ready(function () {
         //if enemy has been chosen
         if (isEnemyChosen) {
 
+            swing.play();
+
             //enemy's life points reduced by character's attack
             enemyLife -= charAttack;
 
@@ -89,6 +99,10 @@ $(document).ready(function () {
 
                 //character's life points reduced by enemy's attack
                 charLife -= enemyAttack;
+
+                setTimeout(function() {
+                    enswing.play();
+                }, 500);
             }
 
             checkLife();
